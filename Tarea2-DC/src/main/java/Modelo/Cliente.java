@@ -7,6 +7,8 @@ public class Cliente {
     private String nombre;
     private String apellido1;
     private String apellido2;
+
+    private String cedula;
     private String direccion;
     private String email;
 
@@ -19,6 +21,23 @@ public class Cliente {
         this.apellido2 = apellido2;
         this.direccion = direccion;
         this.email = email;
+    }
+
+    public Cliente(String nombre, String apellido1, String apellido2, String cedula, String direccion, String email) {
+        this.nombre = nombre;
+        this.apellido1 = apellido1;
+        this.apellido2 = apellido2;
+        this.cedula = cedula;
+        this.direccion = direccion;
+        this.email = email;
+    }
+
+    public String getCedula() {
+        return cedula;
+    }
+
+    public void setCedula(String cedula) {
+        this.cedula = cedula;
     }
 
     public String getNombre() {
