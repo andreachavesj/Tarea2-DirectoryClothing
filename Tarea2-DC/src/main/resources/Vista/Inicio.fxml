@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Text?>
+
+
+<AnchorPane prefHeight="356.0" prefWidth="450.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.Inicio">
+   <children>
+      <Text layoutX="165.0" layoutY="60.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Bienvenido Directory Clothing" />
+      <Button fx:id="btnRegistrarCliente" layoutX="80.0" layoutY="110.0" mnemonicParsing="false" text="Registrar Cliente" />
+      <Button fx:id="btnListarCliente" layoutX="282.0" layoutY="110.0" mnemonicParsing="false" text="Listar Cliente" />
+      <Button fx:id="btnRegistrarCamisa" layoutX="81.0" layoutY="198.0" mnemonicParsing="false" text="Registar Camisa" />
+      <Button fx:id="btnListarCamisa" layoutX="278.0" layoutY="198.0" mnemonicParsing="false" text="Listar Camisas" />
+      <Button fx:id="btnRegistrarCatalogo" layoutX="77.0" layoutY="285.0" mnemonicParsing="false" text="Registar Catalogo" />
+      <Button fx:id="btnListarCatalogo" layoutX="276.0" layoutY="285.0" mnemonicParsing="false" text="Listar Catalogo" />
+   </children>
+</AnchorPane>
