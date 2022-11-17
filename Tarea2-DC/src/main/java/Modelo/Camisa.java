@@ -86,13 +86,13 @@ public class Camisa {
 
     @Override
     public String toString() {
-        return "Camisa{" +
+        return "Camisa: " +
                 "id=" + id +
                 ", codigoColor=" + codigoColor +
                 ", tamaño=" + tamaño +
                 ", descripcion='" + descripcion + '\'' +
                 ", imagen='" + imagen + '\'' +
                 ", precio=" + precio +
-                '}';
+                '\n';
     }
 }

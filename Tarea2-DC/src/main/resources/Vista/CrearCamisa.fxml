@@ -6,7 +6,7 @@
 <?import javafx.scene.layout.AnchorPane?>
 <?import javafx.scene.text.Text?>
 
-p<AnchorPane prefHeight="379.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.CrearCamisa">
+<AnchorPane prefHeight="379.0" prefWidth="558.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Vista.CrearCamisa">
    <children>
       <Text layoutX="251.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Registrar Camisa" />
       <Text layoutX="46.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Id" />
@@ -26,7 +26,7 @@ p<AnchorPane prefHeight="379.0" prefWidth="558.0" xmlns="http://javafx.com/javaf
       <Text layoutX="368.0" layoutY="88.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Colores disponibles: " />
       <TextArea fx:id="txtColores" editable="false" layoutX="323.0" layoutY="96.0" prefHeight="115.0" prefWidth="215.0" />
       <TextField fx:id="txtAgregarColor" layoutX="323.0" layoutY="275.0" promptText="Código color a agregar" />
-      <Button fx:id="btnAgregarColor" layoutX="477.0" layoutY="275.0" mnemonicParsing="false" prefHeight="25.0" prefWidth="64.0" text="Agregar" />
+      <Button fx:id="btnAgregarColor" layoutX="477.0" layoutY="275.0" mnemonicParsing="false" onAction="#agregarColor" prefHeight="25.0" prefWidth="64.0" text="Agregar" />
       <Button fx:id="btnMostrar" layoutX="402.0" layoutY="224.0" mnemonicParsing="false" onAction="#listarColores" text="Mostrar" />
    </children>
 </AnchorPane>
