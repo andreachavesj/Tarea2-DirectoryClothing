@@ -8,6 +8,7 @@ import javafx.scene.Parent;
 import javafx.scene.Scene;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
+import javafx.scene.control.TextArea;
 import javafx.scene.control.TextField;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
@@ -26,22 +27,22 @@ public class CrearCamisa {
     @FXML
     Button btnRegresar;
     @FXML Button btnRegistrar;
-    /**
-     * Funcion que permite crear una cuenta corriente si cumple con las validaciones de verificar cedula y
-     * validar campos y mostrar mensjaje de exito y limpiar campos
-     * @throws Exception
-     */
-    public void guardarCuenta() throws Exception {
+    @FXML Button btnAgregarColor;
+    @FXML TextField txtAgregarColor;
+    @FXML
+    TextArea txtColores;
+
+
+    public void guardarCamisa() throws Exception {
         int id= Integer.valueOf(txtId.getText());
         int color= Integer.valueOf(txtColor.getText());
         String tamaño= txtTamaño.getText();
         String descripcion= txtDescripcion.getText();
         String imagen= txtImagen.getText();
         Double precio= Double.valueOf(txtPrecio.getText());
-        if(ValidarCampos(tamaño, precio)==true){
-            //CamisaControlador.registrarCamisa(id, color, tamaño, descripcion, imagen, precio);
+        if(ValidarCampos(tamaño, precio)==true&&CamisaControlador.registrarCamisa(id, color, tamaño, descripcion, imagen, precio)==true){
             mensajeExitoso();
-            //System.out.println(CamisaControlador.conjuntoCamisas.toString());
+            System.out.println(CamisaControlador.conjuntoCamisas.toString());
             limpiarCampos();
         }else{
             mensajeError();
@@ -59,7 +60,6 @@ public class CrearCamisa {
             alert.setContentText("Error debido a espacios en blanco");
             alert.showAndWait();
             return completo=false;
-
         }else if(precio<=0){
             Alert alert = new Alert(Alert.AlertType.ERROR);
             alert.setHeaderText(null);
@@ -67,7 +67,7 @@ public class CrearCamisa {
             alert.setContentText("Error debido a precio inferior a 0");
             alert.showAndWait();
             return completo=false;
-        }else{
+        }else {
             return completo=true;
         }
     }
@@ -100,8 +100,8 @@ public class CrearCamisa {
      * @param actionEvent
      * @throws IOException
      */
-    public void IrCrearCuenta(ActionEvent actionEvent) throws IOException {
-        Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("CrearCuenta.fxml")));
+    public void IrMenu(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("Inicio.fxml")));
         Stage window = (Stage) btnRegresar.getScene().getWindow();
         window.setScene(new Scene(root));
     }
@@ -116,5 +116,13 @@ public class CrearCamisa {
         txtDescripcion.setText("");
         txtImagen.setText("");
         txtPrecio.setText("");
+    }
+    public void listarColores(){
+        CamisaControlador.colores();
+        txtColores.setText(String.valueOf(CamisaControlador.conjuntoColores));
+    }
+    public void agregarColor(){
+        int color= Integer.parseInt(txtAgregarColor.getText());
+        CamisaControlador.agregarColor(color);
     }
 }
