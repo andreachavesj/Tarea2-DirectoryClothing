@@ -6,7 +6,7 @@ import java.util.Objects;
 public class Camisa {
     private int id;
     private int codigoColor;
-    private char tamaño;
+    private String tamaño;
     private String descripcion;
     private String imagen;
     private double precio;
@@ -14,7 +14,7 @@ public class Camisa {
     public Camisa() {
     }
 
-    public Camisa(int id, int codigoColor, char tamaño, String descripcion, String imagen, double precio) {
+    public Camisa(int id, int codigoColor, String tamaño, String descripcion, String imagen, double precio) {
         this.id = id;
         this.codigoColor = codigoColor;
         this.tamaño = tamaño;
@@ -39,11 +39,11 @@ public class Camisa {
         this.codigoColor = codigoColor;
     }
 
-    public char getTamaño() {
+    public String getTamaño() {
         return tamaño;
     }
 
-    public void setTamaño(char tamaño) {
+    public void setTamaño(String tamaño) {
         this.tamaño = tamaño;
     }
 
