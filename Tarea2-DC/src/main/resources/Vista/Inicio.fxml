@@ -11,7 +11,7 @@
       <Button fx:id="btnListarCliente" layoutX="282.0" layoutY="110.0" mnemonicParsing="false" onAction="#IrListarCliente" text="Listar Cliente" />
       <Button fx:id="btnRegistrarCamisa" layoutX="81.0" layoutY="198.0" mnemonicParsing="false" onAction="#IrCrearCamisa" text="Registar Camisa" />
       <Button fx:id="btnListarCamisa" layoutX="278.0" layoutY="198.0" mnemonicParsing="false" onAction="#IrListarCamisa" text="Listar Camisas" />
-      <Button fx:id="btnRegistrarCatalogo" layoutX="77.0" layoutY="285.0" mnemonicParsing="false" text="Registar Catalogo" />
+      <Button fx:id="btnRegistrarCatalogo" layoutX="77.0" layoutY="285.0" mnemonicParsing="false" onAction="#IrCrearCatalogo" text="Registar Catalogo" />
       <Button fx:id="btnListarCatalogo" layoutX="276.0" layoutY="285.0" mnemonicParsing="false" text="Listar Catalogo" />
    </children>
 </AnchorPane>

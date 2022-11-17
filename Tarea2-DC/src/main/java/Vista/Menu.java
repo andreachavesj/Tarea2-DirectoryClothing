@@ -40,4 +40,9 @@ public class Menu {
         Stage window = (Stage) btnListarCamisa.getScene().getWindow();
         window.setScene(new Scene(root));
     }
+    public void IrCrearCatalogo(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("CrearCatalogo.fxml")));
+        Stage window = (Stage) btnRegistrarCatalogo.getScene().getWindow();
+        window.setScene(new Scene(root));
+    }
 }

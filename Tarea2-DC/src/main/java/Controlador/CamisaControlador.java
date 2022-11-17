@@ -8,7 +8,6 @@ import java.util.ArrayList;
 public class CamisaControlador {
     public static ArrayList<Camisa> conjuntoCamisas=new ArrayList<Camisa>();
     public static ArrayList<Integer> conjuntoColores=new ArrayList<>();
-    public static ArrayList<String> conjuntoTallas=new ArrayList<>();
     public static ArrayList<Integer> conjuntoId=new ArrayList<>();
 
     public static boolean registrarCamisa(int id, int color, String tamaño, String descripcion, String imagen, Double precio) {
