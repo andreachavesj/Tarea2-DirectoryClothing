@@ -118,11 +118,11 @@ public class CrearCamisa {
         txtPrecio.setText("");
     }
     public void listarColores(){
-        CamisaControlador.colores();
         txtColores.setText(String.valueOf(CamisaControlador.conjuntoColores));
     }
     public void agregarColor(){
         int color= Integer.parseInt(txtAgregarColor.getText());
         CamisaControlador.agregarColor(color);
+        txtColores.setText("");
     }
 }

@@ -26,11 +26,6 @@ public class CamisaControlador {
         }
         return correcto;
     }
-    public static void colores(){
-        conjuntoColores.add(1111);
-        conjuntoColores.add(1010);
-        conjuntoColores.add(2001);
-    }
     public static void agregarColor(int color){
         conjuntoColores.add(color);
     }

@@ -35,4 +35,9 @@ public class Menu {
         Stage window = (Stage) btnRegistrarCamisa.getScene().getWindow();
         window.setScene(new Scene(root));
     }
+    public void IrListarCamisa(ActionEvent actionEvent) throws IOException {
+        Parent root = FXMLLoader.load(Objects.requireNonNull(Inicio.class.getResource("ListarCamisa.fxml")));
+        Stage window = (Stage) btnListarCamisa.getScene().getWindow();
+        window.setScene(new Scene(root));
+    }
 }
