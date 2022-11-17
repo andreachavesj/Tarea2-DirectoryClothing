@@ -33,7 +33,6 @@ public class CrearCliente {
         String direccion= txtDireccion.getText();
         String email= txtEmail.getText();
         if(ClienteControlador.registrarCliente(nombre,apellido1, apellido2,cedula, direccion, email)==true && ValidarCampos(nombre,apellido1, apellido2,cedula, direccion, email)==true){
-            ClienteControlador.registrarCliente(nombre,apellido1, apellido2,cedula, direccion, email);
             mensajeExitoso();
         }else{
             mensajeCedulaExistente();
